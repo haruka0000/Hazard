@@ -1,0 +1,7 @@
+<h1>Home#show</h1>
+<p>Find me in app/views/home/show.html.erb</p>
+
+<% @evac.each do |e| %>
+  <h1><%= e.name %></h1>
+  <p><%= e.address %></p>
+<% end %>
