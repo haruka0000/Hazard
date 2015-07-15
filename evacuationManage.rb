@@ -2,9 +2,12 @@
 require'sqlite3'
 require'tk'
 require'./makeEvacuation.rb'
+require"./evacuationInst.rb"
 
 $dbdata = "Evacuation.db"
+$dbdata2 = "./db/development.sqlite3"
 $data1=nil
+$data2=nil
 $tree=nil
 $frame_view = nil
 $frame_first = nil
@@ -244,6 +247,12 @@ insert_button.command=proc{
 button_maketbl = TkButton.new($frame_tree,"text"=>"テーブル構築").bg("yellow").pack
 button_maketbl.command = proc {
     makeTable()
+    view(selectall)
+}
+
+button_install_tbl = TkButton.new($frame_tree,"text"=>"テーブル転送").bg("blue").pack
+button_install_tbl.command = proc {
+    installTable()    
     view(selectall)
 }
 

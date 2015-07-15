@@ -1,13 +1,11 @@
 <html>
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
-
+<h1>徳島避難所一覧</h1>
   <head>
   </head>
 
   <body>
     <div class="container">
-      <table class="table">
+      <table class="table table-striped">
 	<thead>
 	  <tr>
 	    <th>建物名</th>
@@ -23,9 +21,9 @@
 	</thead>
 	<% @evac.each do |e| %>
 	
-	  <tr>
-	    <td><p><%= e.name %></p></td>
-	    <td><p><%= e.address %></p></td>
+	  <tr> 
+	    <td><p><a <%= "href=http://www.google.co.jp/search?hl=ja&source=hp&q=#{e.name}" %> ><%= e.name %></a></p></td>
+	    <td><p><a <%= "href=https://www.google.co.jp/maps/search/#{e.name}" %> ><%= e.address %></a></p></td>
 	    <td><p><%= e.earthquake %></p></td>
 	    <td><p><%= e.tsunami %></p></td>
 	    <td><p><%= e.flood %></p></td>

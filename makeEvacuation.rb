@@ -13,9 +13,9 @@ def earthquake
         check_sql = "SELECT 建物名 FROM 避難所 where 建物名='#{row[1]}';"
         print "#"
         if db.execute(check_sql).size == 0
-            sql1 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', 'A', ' ', ' ', ' ', ' ', ' ', ' ');"
+            sql1 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', '○', ' ', ' ', ' ', ' ', ' ', ' ');"
         else
-            sql1 = "update 避難所 set 地震='A' where 建物名='#{row[1]}';"
+            sql1 = "update 避難所 set 地震='○' where 建物名='#{row[1]}';"
 		end
 
         db.execute(sql1)
@@ -40,9 +40,9 @@ def tsunami
         check_sql = "SELECT 建物名 FROM 避難所 where 建物名='#{row[1]}';"
         print "#"
         if db.execute(check_sql).size == 0
-            sql2 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', ' ', 'A', ' ', ' ', ' ', ' ', ' ');"
+            sql2 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', ' ', '○', ' ', ' ', ' ', ' ', ' ');"
         else
-            sql2 = "update 避難所 set 津波='A' where 建物名='#{row[1]}';"
+            sql2 = "update 避難所 set 津波='○' where 建物名='#{row[1]}';"
 		end
 
         db.execute(sql2)
@@ -67,9 +67,9 @@ def flood
         check_sql = "SELECT 建物名 FROM 避難所 where 建物名='#{row[1]}';"
         print "#"
         if db.execute(check_sql).size == 0
-            sql1 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', ' ', ' ', 'A', ' ', ' ', ' ', ' ');"
+            sql1 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', ' ', ' ', '○', ' ', ' ', ' ', ' ');"
         else
-            sql1 = "update 避難所 set 洪水='A' where 建物名='#{row[1]}';"
+            sql1 = "update 避難所 set 洪水='○' where 建物名='#{row[1]}';"
 		end
 
         db.execute(sql1)
@@ -94,9 +94,9 @@ def surge
         check_sql = "SELECT 建物名 FROM 避難所 where 建物名='#{row[1]}';"
         print "#"
         if db.execute(check_sql).size == 0
-            sql1 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', ' ', ' ', ' ', 'A', ' ', ' ', ' ');"
+            sql1 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', ' ', ' ', ' ', '○', ' ', ' ', ' ');"
         else
-            sql1 = "update 避難所 set 高潮='A' where 建物名='#{row[1]}';"
+            sql1 = "update 避難所 set 高潮='○' where 建物名='#{row[1]}';"
 		end
 
         db.execute(sql1)
@@ -121,9 +121,9 @@ def landslide
         check_sql = "SELECT 建物名 FROM 避難所 where 建物名='#{row[1]}';"
         print "#"
         if db.execute(check_sql).size == 0
-            sql1 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', ' ', ' ', ' ', ' ', 'A', ' ', ' ');"
+            sql1 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', ' ', ' ', ' ', ' ', '○', ' ', ' ');"
         else
-            sql1 = "update 避難所 set 土砂='A' where 建物名='#{row[1]}';"
+            sql1 = "update 避難所 set 土砂='○' where 建物名='#{row[1]}';"
 		end
 
         db.execute(sql1)
@@ -148,9 +148,9 @@ def fire
         check_sql = "SELECT 建物名 FROM 避難所 where 建物名='#{row[1]}';"
         print "#"
         if db.execute(check_sql).size == 0
-            sql1 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', ' ', ' ', ' ', ' ', ' ', 'A', ' ');"
+            sql1 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', ' ', ' ', ' ', ' ', ' ', '○', ' ');"
         else
-            sql1 = "update 避難所 set 火事='A' where 建物名='#{row[1]}';"
+            sql1 = "update 避難所 set 火事='○' where 建物名='#{row[1]}';"
 		end
 
         db.execute(sql1)
@@ -175,9 +175,9 @@ def inlandwaters
         check_sql = "SELECT 建物名 FROM 避難所 where 建物名='#{row[1]}';"
         print "#"
         if db.execute(check_sql).size == 0
-            sql1 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', ' ', ' ', ' ', ' ', ' ', ' ', 'A');"
+            sql1 = "insert into 避難所 values('#{row[1]}', '#{row[2]}', ' ', ' ', ' ', ' ', ' ', ' ', '○');"
         else
-            sql1 = "update 避難所 set 内水='A' where 建物名='#{row[1]}';"
+            sql1 = "update 避難所 set 内水='○' where 建物名='#{row[1]}';"
 		end
 
         db.execute(sql1)
