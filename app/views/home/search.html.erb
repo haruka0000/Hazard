@@ -1,0 +1,36 @@
+<html>
+<h1>徳島避難所一覧</h1>
+  <head>
+  </head>
+
+  <body>
+    <div class="container">
+      <table class="table table-striped">
+	<thead>
+	  <tr>
+	    <th>建物名</th>
+	    <th>住所</th>
+	    <th>地震</th>
+	    <th>津波</th>
+            <th>洪水</th>
+	    <th>高潮</th>
+            <th>土砂</th>
+	    <th>火事</th>
+            <th>内水</th>
+	  </tr>
+	</thead>
+	  <tr> 
+	    <td><p><a <%= "href=http://www.google.co.jp/search?hl=ja&source=hp&q=#{@evac.name}" %> ><%= @evac.name %></a></p></td>
+	    <td><p><a <%= "href=https://www.google.co.jp/maps/search/#{@evac.name}" %> ><%= @evac.address %></a></p></td>
+	    <td><p><%= @evac.earthquake %></p></td>
+	    <td><p><%= @evac.tsunami %></p></td>
+	    <td><p><%= @evac.flood %></p></td>
+	    <td><p><%= @evac.surge %></p></td>
+	    <td><p><%= @evac.landslide %></p></td>
+	    <td><p><%= @evac.fire %></p></td>
+	    <td><p><%= @evac.inlandwaters %></p></td>
+	  </tr>
+      </table>
+    </div>
+  </body>
+</html>

@@ -9,4 +9,8 @@ class HomeController < ApplicationController
   def show
     @evac = Evacuation.all
   end
+
+  def search
+    @evac = Evacuation.find_by(:evacuations => params[:id])
+  end
 end
